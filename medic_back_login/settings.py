@@ -97,9 +97,9 @@ WSGI_APPLICATION = 'medic_back_login.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': env.str('DATABASE_NAME', default='medic_database') ,
-        'USER' : env.str('DATABASE_USER', default='postgres') ,
-        'PASSWORD': env.str('DATABASE_PASS', default='admin') ,
+        'NAME': env.str('DATABASE_NAME', default='medic_database'),
+        'USER' : env.str('DATABASE_USER', default='postgres'),
+        'PASSWORD': env.str('DATABASE_PASS', default='admin'),
         'HOST':  env.str('DATABASE_HOST', default='localhost'),
         'PORT': '5432'
     }
