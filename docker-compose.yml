@@ -5,7 +5,7 @@ services:
   back-login:
     build: .
     ports:
-      - "8888:8000"
+      - "7000:8000"
     environment:
       DATABASE_NAME: medic-bd
       DATABASE_HOST: db-test-free.cdxsrhofpryf.us-east-1.rds.amazonaws.com
