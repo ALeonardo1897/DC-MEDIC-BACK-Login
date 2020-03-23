@@ -29,7 +29,7 @@ SECRET_KEY = '_roo+p_mh+v2)sxzkhl61d+oduz6nyfh_j^i1b=2z@j%vp_s-7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [ '54.224.189.249' ]
+ALLOWED_HOSTS = [ '54.224.189.249' , '54.224.189.249:5000' ]
 
 REST_FRAMEWORK = {
 
