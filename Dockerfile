@@ -1,7 +1,7 @@
 #Image Base
 FROM python:3.8.2-buster
 
-EXPOSE 8000
+EXPOSE 5000
 
 #Copy Source Code
 COPY . /app

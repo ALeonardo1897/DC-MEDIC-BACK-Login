@@ -5,7 +5,7 @@ services:
   back-login:
     build: .
     ports:
-      - "7000:8000"
+      - "7000:5000"
     environment:
       DATABASE_NAME: medic-bd
       DATABASE_HOST: db-test-free.cdxsrhofpryf.us-east-1.rds.amazonaws.com
@@ -14,4 +14,4 @@ services:
     command: >
       sh -c "sleep 5s &&
              python manage.py migrate &&
-             python manage.py runserver 0.0.0.0:8000"
+             python manage.py runserver 0.0.0.0:5000"
