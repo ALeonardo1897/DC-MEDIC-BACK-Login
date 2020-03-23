@@ -7,10 +7,11 @@ services:
     ports:
       - "7000:8000"
     environment:
-      DATABASE_NAME: medic-bd
+      DATABASE_NAME: postgres
       DATABASE_HOST: db-test-free.cdxsrhofpryf.us-east-1.rds.amazonaws.com
       DATABASE_USER: postgres
       DATABASE_PASSWORD: adminadmin
     command: >
-      sh -c "python manage.py migrate &&
+      sh -c "sleep 5s &&
+             python manage.py migrate &&
              python manage.py runserver 0.0.0.0:8000"
