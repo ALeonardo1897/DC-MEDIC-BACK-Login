@@ -10,7 +10,7 @@ services:
       DATABASE_NAME: medic-bd
       DATABASE_HOST: db-test-free.cdxsrhofpryf.us-east-1.rds.amazonaws.com
       DATABASE_USER: leonardo
-      DATABASE_PASSWORD: testeo
+      DATABASE_PASS: testeo
     command: >
       sh -c "sleep 5s &&
              python manage.py migrate &&
