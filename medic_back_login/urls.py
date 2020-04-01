@@ -21,5 +21,5 @@ from security.jwt import MedicBackTokenObtainPairView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/login', MedicBackTokenObtainPairView.as_view())
+    path('login/', MedicBackTokenObtainPairView.as_view())
 ]

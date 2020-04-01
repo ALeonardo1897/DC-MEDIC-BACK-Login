@@ -27,9 +27,9 @@ env = environ.Env()
 SECRET_KEY = '_roo+p_mh+v2)sxzkhl61d+oduz6nyfh_j^i1b=2z@j%vp_s-7'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = [ '54.224.189.249']
+ALLOWED_HOSTS = [ env.str('K8S_CLUSTER_IP', default='127.0.0.1') ]
 
 REST_FRAMEWORK = {
 
@@ -97,7 +97,7 @@ WSGI_APPLICATION = 'medic_back_login.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': env.str('DATABASE_NAME', default='medic_database'),
+        'NAME': env.str('DATABASE_NAME', default='medic-database'),
         'USER' : env.str('DATABASE_USER', default='postgres'),
         'PASSWORD': env.str('DATABASE_PASS', default='admin'),
         'HOST':  env.str('DATABASE_HOST', default='localhost'),
